@@ -3,6 +3,7 @@ from pyautogui import press, hotkey
 from PIL import Image
 import qrcode
 import socket
+import sys
 import os
 
 WINDOWSKEY = {
@@ -33,14 +34,20 @@ with Image.open('login.png') as img:
 def dothis(key):
     if key == "close":
         hotkey('alt', 'f4')
+        return True
     try:
         press(WINDOWSKEY[key])
         return True
     except KeyError:
         print(key)
         return False
+if getattr(sys, 'frozen', False):
+    template_folder = os.path.join(sys._MEIPASS, 'templates')
+    app = Flask(__name__, template_folder=template_folder)
+else:
+    app = Flask(__name__)
 
-app = Flask(__name__)
+print(sys.path)
 
 @app.route('/')
 def index():
