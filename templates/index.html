@@ -4,7 +4,7 @@
         <link rel="shortcut icon" href="static/preguica.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/css/styleteste.css">
+        <link rel="stylesheet" href="/static/css/style.css">
         <title>Controle de Midia</title>
     </head>
     <script src="/static/js/jquery.min.js"></script>
@@ -25,6 +25,7 @@
     <body>
         <div class="layoutTop">
             <button class="glyphicon glyphicon-off btn-close effect" style="font-size: 70px;" value="close" onclick="action(this.value)"></button>
+            <button class="btn-close-win effect" style="font-size: 70px;" value="closewin" onclick="action(this.value)"><img src="/static/closewin.png" alt="close-win" style="width: 75px;"></button>
             <button class="glyphicon glyphicon-volume-off btn-mute effect" style="font-size: 70px;" value="mute" onclick="action(this.value)"></button>
         </div>
         <div class="layoutMid">
@@ -33,6 +34,18 @@
             <button class="glyphicon glyphicon-play-circle btn-pause effect" style="font-size: 70px;" value="start" onclick="action(this.value)"></button>
             <button class="glyphicon glyphicon-forward btn-next effect" style="font-size: 70px;" value="next" onclick="action(this.value)"></button>
             <button class="glyphicon glyphicon-volume-down btn-voldown effect" style="font-size: 70px;" value="voldown" onclick="action(this.value)"></button>
+        </div>
+
+        <div class="layoutBot">
+            <button class="glyphicon glyphicon-fast-backward effect" style="font-size: 60px;" value="fastback" onclick="action(this.value)"></button>
+            <button class="glyphicon glyphicon-resize-full effect" style="font-size: 60px;" value="fullscreen" onclick="action(this.value)"></button>
+            <button class="glyphicon glyphicon-fast-forward effect" style="font-size: 60px;" value="fastnext" onclick="action(this.value)"></button>
+        </div>
+
+        <div class="layoutExtra">
+            <button class="effect" style="font-size: 60px;" value="crunchyrollback" onclick="action(this.value)"><img src="/static/crunchyrollback.png" alt="bcrunch" style="width: 90px;"></button>
+            <button class="effect" value="youtubemusic" onclick="action(this.value)"><img src="/static/youtube-music-logo-1.png" alt="ytmusic" style="width: 70px;"></button>
+            <button class="effect" value="crunchyrollnext" onclick="action(this.value)"><img src="/static/crunchyrollnext.png" alt="ncrunch" style="width: 90px;"></button>
         </div>
     </body>
 </html>
