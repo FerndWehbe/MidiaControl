@@ -81,7 +81,8 @@ button{
 }
 
 .layoutExtra {
-    display: grid;
+    /* display: grid; */
+    display: none;
     padding: 5%;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
